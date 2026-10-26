@@ -8,3 +8,11 @@
 function isPalindrome(str) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Palindrome",
+  fn: isPalindrome,
+  tests: [ {args:['Racecar'],expected:true}, {args:['A man, a plan, a canal: Panama'],expected:true}, {args:['hello'],expected:false}, {args:[''],expected:true} ],
+};
+
