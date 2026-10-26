@@ -10,3 +10,11 @@ function countVowels(str) {
   }
   return count;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Count vowels",
+  fn: countVowels,
+  tests: [ {args:['hello'],expected:2}, {args:['AEIOU'],expected:5}, {args:['xyz'],expected:0}, {args:['Programming'],expected:3} ],
+};
+
