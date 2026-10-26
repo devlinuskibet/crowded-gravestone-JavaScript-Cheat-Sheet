@@ -7,3 +7,11 @@
 function capitalizeWords(sentence) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Capitalise each word",
+  fn: capitalizeWords,
+  tests: [ {args:['hello world'],expected:'Hello World'}, {args:['javaScript is FUN'],expected:'Javascript Is Fun'}, {args:['linus'],expected:'Linus'} ],
+};
+
