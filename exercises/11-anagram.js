@@ -7,3 +7,11 @@
 function isAnagram(a, b) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Anagram check",
+  fn: isAnagram,
+  tests: [ {args:['Listen','Silent'],expected:true}, {args:['hello','world'],expected:false}, {args:['abc','ab'],expected:false}, {args:['rat','tar'],expected:true} ],
+};
+
