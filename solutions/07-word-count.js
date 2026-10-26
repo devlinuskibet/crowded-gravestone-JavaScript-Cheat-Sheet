@@ -12,3 +12,11 @@ function wordCount(text) {
   }
   return counts;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Word count",
+  fn: wordCount,
+  tests: [ {args:['the cat and the hat'],expected:{the:2,cat:1,and:1,hat:1}}, {args:['Hi hi HI'],expected:{hi:3}}, {args:[''],expected:{}} ],
+};
+
