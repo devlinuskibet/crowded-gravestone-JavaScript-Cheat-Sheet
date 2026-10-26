@@ -7,3 +7,11 @@
 function twoSum(nums, target) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Two sum",
+  fn: twoSum,
+  tests: [ {args:[[2,7,11,15],9],expected:[0,1]}, {args:[[3,2,4],6],expected:[1,2]}, {args:[[3,3],6],expected:[0,1]} ],
+};
+
