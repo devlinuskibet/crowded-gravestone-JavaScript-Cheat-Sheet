@@ -10,3 +10,11 @@ function capitalizeWords(sentence) {
     .map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
     .join(' ');
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Capitalise each word",
+  fn: capitalizeWords,
+  tests: [ {args:['hello world'],expected:'Hello World'}, {args:['javaScript is FUN'],expected:'Javascript Is Fun'}, {args:['linus'],expected:'Linus'} ],
+};
+
