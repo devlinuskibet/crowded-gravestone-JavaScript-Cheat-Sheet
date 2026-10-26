@@ -7,3 +7,11 @@
 function reverseString(str) {
   return str.split('').reverse().join('');
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Reverse a string",
+  fn: reverseString,
+  tests: [ {args:['hello'],expected:'olleh'}, {args:[''],expected:''}, {args:['a'],expected:'a'}, {args:['Linus'],expected:'suniL'} ],
+};
+
