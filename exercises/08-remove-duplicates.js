@@ -7,3 +7,11 @@
 function removeDuplicates(arr) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Remove duplicates",
+  fn: removeDuplicates,
+  tests: [ {args:[[1,2,2,3,1]],expected:[1,2,3]}, {args:[['a','a']],expected:['a']}, {args:[[]],expected:[]} ],
+};
+
