@@ -5,5 +5,17 @@
 // Run:  node run.js 01
 
 function sumArray(numbers) {
-  // YOUR CODE HERE
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Sum of an array",
+  fn: sumArray,
+  tests: [ {args:[[1,2,3]],expected:6}, {args:[[]],expected:0}, {args:[[-1,1]],expected:0}, {args:[[10]],expected:10} ],
+};
+
