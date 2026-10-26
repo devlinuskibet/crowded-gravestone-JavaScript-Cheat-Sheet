@@ -9,3 +9,11 @@ function isPalindrome(str) {
   const clean = str.toLowerCase().replace(/[^a-z0-9]/g, '');
   return clean === clean.split('').reverse().join('');
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Palindrome",
+  fn: isPalindrome,
+  tests: [ {args:['Racecar'],expected:true}, {args:['A man, a plan, a canal: Panama'],expected:true}, {args:['hello'],expected:false}, {args:[''],expected:true} ],
+};
+
