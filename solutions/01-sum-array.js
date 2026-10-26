@@ -9,3 +9,11 @@ function sumArray(numbers) {
   for (const n of numbers) total += n;
   return total;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Sum of an array",
+  fn: sumArray,
+  tests: [ {args:[[1,2,3]],expected:6}, {args:[[]],expected:0}, {args:[[-1,1]],expected:0}, {args:[[10]],expected:10} ],
+};
+
