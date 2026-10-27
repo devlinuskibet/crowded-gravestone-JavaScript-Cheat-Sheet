@@ -7,3 +7,32 @@
 function throttle(fn, interval) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Throttle a function",
+  fn: throttle,
+  tests: [
+    {
+      call: (throttle) => {
+        let count = 0;
+        const f = throttle(() => count++, 50);
+        f(); f(); f();
+        return count;
+      },
+      expected: 1
+    },
+    {
+      call: async (throttle) => {
+        let count = 0;
+        const f = throttle(() => count++, 25);
+        f();
+        await new Promise(r => setTimeout(r, 40));
+        f();
+        return count;
+      },
+      expected: 2
+    }
+  ],
+};
+
