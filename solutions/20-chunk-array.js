@@ -11,3 +11,16 @@ function chunk(array, size) {
   }
   return result;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Chunk an array",
+  fn: chunk,
+  tests: [
+    { args: [[1, 2, 3, 4, 5], 2], expected: [[1, 2], [3, 4], [5]] },
+    { args: [[1, 2, 3, 4], 2], expected: [[1, 2], [3, 4]] },
+    { args: [[1, 2], 5], expected: [[1, 2]] },
+    { args: [[], 3], expected: [] }
+  ],
+};
+
