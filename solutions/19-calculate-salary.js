@@ -8,3 +8,16 @@ function calculateSalary(basicSalary = 0, benefits = 0, deductions = 0) {
   const net = basicSalary + benefits - deductions;
   return Math.max(0, net);
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Calculate net salary",
+  fn: calculateSalary,
+  tests: [
+    { args: [50000, 10000, 5000], expected: 55000 },
+    { args: [30000, 0, 5000], expected: 25000 },
+    { args: [20000], expected: 20000 },
+    { args: [1000, 500, 3000], expected: 0 }
+  ],
+};
+
