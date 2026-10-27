@@ -7,3 +7,16 @@
 function flattenDeep(arr) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Flatten deeply nested array",
+  fn: flattenDeep,
+  tests: [
+    { args: [[1, [2, [3, [4]], 5]]], expected: [1, 2, 3, 4, 5] },
+    { args: [[[[1]], [2, 3]]], expected: [1, 2, 3] },
+    { args: [[]], expected: [] },
+    { args: [[1, 2, 3]], expected: [1, 2, 3] }
+  ],
+};
+
