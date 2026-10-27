@@ -11,3 +11,32 @@ function debounce(fn, delay) {
     timer = setTimeout(() => fn.apply(this, args), delay);
   };
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Debounce a function",
+  fn: debounce,
+  tests: [
+    {
+      call: async (debounce) => {
+        let count = 0;
+        const f = debounce(() => count++, 30);
+        f(); f(); f();
+        await new Promise(r => setTimeout(r, 60));
+        return count;
+      },
+      expected: 1
+    },
+    {
+      call: async (debounce) => {
+        let lastVal = 0;
+        const f = debounce(v => { lastVal = v; }, 20);
+        f(1); f(2); f(3);
+        await new Promise(r => setTimeout(r, 50));
+        return lastVal;
+      },
+      expected: 3
+    }
+  ],
+};
+
