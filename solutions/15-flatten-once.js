@@ -7,3 +7,11 @@
 function flattenOnce(arr) {
   return arr.reduce((flat, item) => flat.concat(item), []);
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Flatten once",
+  fn: flattenOnce,
+  tests: [ {args:[[1,[2,3],[4,[5]]]],expected:[1,2,3,4,[5]]}, {args:[[]],expected:[]}, {args:[[[1],[2]]],expected:[1,2]} ],
+};
+
