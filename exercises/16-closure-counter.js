@@ -7,3 +7,11 @@
 function makeCounter() {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Closure: a counter",
+  fn: makeCounter,
+  tests: [ {call:(fn)=>{const c=fn(); c(); c(); return c();},expected:3}, {call:(fn)=>{const a=fn(); const b=fn(); a(); a(); return b();},expected:1} ],
+};
+
