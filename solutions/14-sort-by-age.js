@@ -7,3 +7,11 @@
 function sortByAge(people) {
   return [...people].sort((a, b) => a.age - b.age);
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Sort objects",
+  fn: sortByAge,
+  tests: [ {args:[[{name:'A',age:30},{name:'B',age:20},{name:'C',age:25}]],expected:[{name:'B',age:20},{name:'C',age:25},{name:'A',age:30}]}, {args:[[]],expected:[]} ],
+};
+
