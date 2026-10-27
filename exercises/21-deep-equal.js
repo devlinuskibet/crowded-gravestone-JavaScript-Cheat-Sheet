@@ -1,0 +1,9 @@
+// Exercise 21: Deep equality check
+// Write deepEqual(a, b) that returns true if two values are strictly equal primitives or structurally equal objects/arrays, and false otherwise.
+// Example: deepEqual({ x: [1, 2] }, { x: [1, 2] }) -> true
+// Hint: Check strict equality first. Then check if both are non-null objects and compare their keys recursively.
+// Run:  node run.js 21
+
+function deepEqual(a, b) {
+  // YOUR CODE HERE
+}
