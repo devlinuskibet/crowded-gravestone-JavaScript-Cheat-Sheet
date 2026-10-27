@@ -23,3 +23,11 @@ async function safeUserName(id) {
     return 'Unknown';
   }
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Async / await",
+  fn: safeUserName,
+  tests: [ {args:[1],expected:'Ada'}, {args:[3],expected:'Linus'}, {args:[4],expected:'Unknown'} ],
+};
+
