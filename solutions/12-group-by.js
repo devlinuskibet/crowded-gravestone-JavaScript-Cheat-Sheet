@@ -12,3 +12,11 @@ function groupBy(items, key) {
   }
   return groups;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Group by a key",
+  fn: groupBy,
+  tests: [ {args:[[{n:'a',t:'x'},{n:'b',t:'y'},{n:'c',t:'x'}],'t'],expected:{x:[{n:'a',t:'x'},{n:'c',t:'x'}],y:[{n:'b',t:'y'}]}}, {args:[[],'t'],expected:{}} ],
+};
+
