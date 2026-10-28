@@ -7,3 +7,15 @@
 function curry(fn) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Curry a function",
+  fn: curry,
+  tests: [
+    { call: (curry) => curry((a, b, c) => a + b + c)(1)(2)(3), expected: 6 },
+    { call: (curry) => curry((a, b, c) => a * b * c)(2, 3)(4), expected: 24 },
+    { call: (curry) => curry((a, b) => a + ' ' + b)('Hello', 'World'), expected: 'Hello World' }
+  ],
+};
+
