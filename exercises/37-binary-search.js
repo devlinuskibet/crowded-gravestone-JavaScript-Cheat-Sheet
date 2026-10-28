@@ -7,3 +7,16 @@
 function binarySearch(nums, target) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Binary search",
+  fn: binarySearch,
+  tests: [
+    { args: [[-1, 0, 3, 5, 9, 12], 9], expected: 4 },
+    { args: [[-1, 0, 3, 5, 9, 12], 2], expected: -1 },
+    { args: [[5], 5], expected: 0 },
+    { args: [[], 1], expected: -1 }
+  ],
+};
+
