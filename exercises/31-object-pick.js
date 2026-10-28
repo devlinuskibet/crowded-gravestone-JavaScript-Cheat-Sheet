@@ -7,3 +7,15 @@
 function pick(obj, keys) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Pick object properties",
+  fn: pick,
+  tests: [
+    { args: [{ a: 1, b: 2, c: 3 }, ['a', 'c']], expected: { a: 1, c: 3 } },
+    { args: [{ a: 1, b: 2 }, ['c', 'd']], expected: {} },
+    { args: [{}, ['a']], expected: {} }
+  ],
+};
+
