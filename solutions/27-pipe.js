@@ -9,3 +9,15 @@ function pipe(...fns) {
     return fns.reduce((acc, fn) => fn(acc), initialValue);
   };
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Pipe functions",
+  fn: pipe,
+  tests: [
+    { call: (pipe) => pipe(x => x + 1, x => x * 2)(3), expected: 8 },
+    { call: (pipe) => pipe(s => s.trim(), s => s.toUpperCase(), s => s + '!')('  hi  '), expected: 'HI!' },
+    { call: (pipe) => pipe()(42), expected: 42 }
+  ],
+};
+
