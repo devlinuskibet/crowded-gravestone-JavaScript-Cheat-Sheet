@@ -14,3 +14,15 @@ function omit(obj, keys) {
   }
   return result;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Omit object properties",
+  fn: omit,
+  tests: [
+    { args: [{ a: 1, b: 2, c: 3 }, ['b']], expected: { a: 1, c: 3 } },
+    { args: [{ x: 10, y: 20 }, ['x', 'y']], expected: {} },
+    { args: [{ a: 1 }, []], expected: { a: 1 } }
+  ],
+};
+
