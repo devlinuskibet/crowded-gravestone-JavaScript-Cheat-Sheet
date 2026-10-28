@@ -16,3 +16,17 @@ function isValid(s) {
   }
   return stack.length === 0;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Valid parentheses",
+  fn: isValid,
+  tests: [
+    { args: ["()[]{}"], expected: true },
+    { args: ["(]"], expected: false },
+    { args: ["([)]"], expected: false },
+    { args: ["{[]}"], expected: true },
+    { args: [""], expected: true }
+  ],
+};
+
