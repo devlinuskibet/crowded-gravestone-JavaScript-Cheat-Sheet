@@ -15,3 +15,16 @@ function longestCommonPrefix(strs) {
   }
   return prefix;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Longest common prefix",
+  fn: longestCommonPrefix,
+  tests: [
+    { args: [["flower", "flow", "flight"]], expected: "fl" },
+    { args: [["dog", "racecar", "car"]], expected: "" },
+    { args: [["interspecies", "interstellar", "interstate"]], expected: "inters" },
+    { args: [[]], expected: "" }
+  ],
+};
+
