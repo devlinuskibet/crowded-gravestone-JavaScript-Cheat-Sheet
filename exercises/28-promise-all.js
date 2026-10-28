@@ -7,3 +7,27 @@
 function promiseAll(promises) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Implement Promise.all",
+  fn: promiseAll,
+  tests: [
+    { call: async (promiseAll) => await promiseAll([Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)]), expected: [1, 2, 3] },
+    {
+      call: async (promiseAll) => {
+        try {
+          const p = Promise.reject(new Error('fail'));
+          p.catch(() => {});
+          await promiseAll([Promise.resolve(1), p]);
+          return 'ok';
+        } catch (e) {
+          return e.message;
+        }
+      },
+      expected: 'fail'
+    },
+    { call: async (promiseAll) => await promiseAll([]), expected: [] }
+  ],
+};
+
