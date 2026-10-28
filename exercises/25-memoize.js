@@ -7,3 +7,31 @@
 function memoize(fn) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Memoize function results",
+  fn: memoize,
+  tests: [
+    {
+      call: (memoize) => {
+        let calls = 0;
+        const add = memoize((a, b) => { calls++; return a + b; });
+        const r1 = add(2, 3);
+        const r2 = add(2, 3);
+        return { r1, r2, calls };
+      },
+      expected: { r1: 5, r2: 5, calls: 1 }
+    },
+    {
+      call: (memoize) => {
+        let calls = 0;
+        const sq = memoize(x => { calls++; return x * x; });
+        sq(4); sq(5); sq(4);
+        return calls;
+      },
+      expected: 2
+    }
+  ],
+};
+
