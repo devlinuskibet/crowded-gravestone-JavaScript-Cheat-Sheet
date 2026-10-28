@@ -10,3 +10,15 @@ function missingNumber(nums) {
   const actualSum = nums.reduce((sum, x) => sum + x, 0);
   return expectedSum - actualSum;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Find missing number",
+  fn: missingNumber,
+  tests: [
+    { args: [[3, 0, 1]], expected: 2 },
+    { args: [[0, 1]], expected: 2 },
+    { args: [[9, 6, 4, 2, 3, 5, 7, 0, 1]], expected: 8 }
+  ],
+};
+
