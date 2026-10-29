@@ -7,3 +7,15 @@
 function difference(arr1, arr2) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Array difference",
+  fn: difference,
+  tests: [
+    { args: [[1, 2, 3, 4], [2, 4]], expected: [1, 3] },
+    { args: [[1, 2], [1, 2]], expected: [] },
+    { args: [[1, 2, 3], []], expected: [1, 2, 3] }
+  ],
+};
+
