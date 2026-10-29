@@ -7,3 +7,16 @@
 function kebabToCamel(str) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Kebab-case to camelCase",
+  fn: kebabToCamel,
+  tests: [
+    { args: ['background-color'], expected: 'backgroundColor' },
+    { args: ['border-top-left-radius'], expected: 'borderTopLeftRadius' },
+    { args: ['simple'], expected: 'simple' },
+    { args: [''], expected: '' }
+  ],
+};
+
