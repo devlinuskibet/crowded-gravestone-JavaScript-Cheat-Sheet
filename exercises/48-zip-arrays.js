@@ -7,3 +7,15 @@
 function zip(arr1, arr2) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Zip arrays",
+  fn: zip,
+  tests: [
+    { args: [['a', 'b', 'c'], [1, 2]], expected: [['a', 1], ['b', 2]] },
+    { args: [[1, 2], ['x', 'y']], expected: [[1, 'x'], [2, 'y']] },
+    { args: [[], [1, 2]], expected: [] }
+  ],
+};
+
