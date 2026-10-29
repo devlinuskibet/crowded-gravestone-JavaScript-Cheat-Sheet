@@ -9,3 +9,16 @@ function truncate(str, maxLength) {
   if (maxLength <= 3) return str.slice(0, maxLength);
   return str.slice(0, maxLength - 3) + '...';
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Truncate string",
+  fn: truncate,
+  tests: [
+    { args: ['Hello World', 8], expected: 'Hello...' },
+    { args: ['Hello', 10], expected: 'Hello' },
+    { args: ['Programming', 4], expected: 'P...' },
+    { args: ['Hey', 2], expected: 'He' }
+  ],
+};
+
