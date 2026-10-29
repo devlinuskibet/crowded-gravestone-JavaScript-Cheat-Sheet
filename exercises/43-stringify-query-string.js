@@ -7,3 +7,15 @@
 function stringifyQueryString(params) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Stringify query string",
+  fn: stringifyQueryString,
+  tests: [
+    { args: [{ name: 'John Doe', age: 30 }], expected: 'age=30&name=John%20Doe' },
+    { args: [{ b: 'hello world', a: 1 }], expected: 'a=1&b=hello%20world' },
+    { args: [{}], expected: '' }
+  ],
+};
+
