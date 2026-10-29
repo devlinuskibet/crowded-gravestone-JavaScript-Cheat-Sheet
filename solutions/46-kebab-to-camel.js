@@ -7,3 +7,16 @@
 function kebabToCamel(str) {
   return str.replace(/-([a-z0-9])/gi, (_, letter) => letter.toUpperCase());
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Kebab-case to camelCase",
+  fn: kebabToCamel,
+  tests: [
+    { args: ['background-color'], expected: 'backgroundColor' },
+    { args: ['border-top-left-radius'], expected: 'borderTopLeftRadius' },
+    { args: ['simple'], expected: 'simple' },
+    { args: [''], expected: '' }
+  ],
+};
+
