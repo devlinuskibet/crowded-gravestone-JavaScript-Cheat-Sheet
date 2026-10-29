@@ -7,3 +7,15 @@
 function parseQueryString(queryString) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Parse URL query string",
+  fn: parseQueryString,
+  tests: [
+    { args: ['?name=John%20Doe&age=30'], expected: { name: 'John Doe', age: '30' } },
+    { args: ['a=1&b=2'], expected: { a: '1', b: '2' } },
+    { args: [''], expected: {} }
+  ],
+};
+
