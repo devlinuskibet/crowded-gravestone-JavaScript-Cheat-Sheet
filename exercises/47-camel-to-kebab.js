@@ -7,3 +7,16 @@
 function camelToKebab(str) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "camelCase to kebab-case",
+  fn: camelToKebab,
+  tests: [
+    { args: ['fontSize'], expected: 'font-size' },
+    { args: ['borderTopLeftRadius'], expected: 'border-top-left-radius' },
+    { args: ['simple'], expected: 'simple' },
+    { args: [''], expected: '' }
+  ],
+};
+
