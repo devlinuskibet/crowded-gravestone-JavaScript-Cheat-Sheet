@@ -7,3 +7,16 @@
 function get(obj, path, defaultValue) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Safe property get by path",
+  fn: get,
+  tests: [
+    { args: [{ a: { b: { c: 42 } } }, 'a.b.c'], expected: 42 },
+    { args: [{ a: { b: null } }, 'a.b.c', 'default'], expected: 'default' },
+    { args: [{}, 'x.y.z', 0], expected: 0 },
+    { args: [{ x: 10 }, 'x'], expected: 10 }
+  ],
+};
+
