@@ -7,3 +7,15 @@
 function unzip(pairs) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Unzip arrays",
+  fn: unzip,
+  tests: [
+    { args: [[['a', 1], ['b', 2]]], expected: [['a', 'b'], [1, 2]] },
+    { args: [[['x', 10], ['y', 20], ['z', 30]]], expected: [['x', 'y', 'z'], [10, 20, 30]] },
+    { args: [[]], expected: [[], []] }
+  ],
+};
+
