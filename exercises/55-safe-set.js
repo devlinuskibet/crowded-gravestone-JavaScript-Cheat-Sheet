@@ -7,3 +7,15 @@
 function set(obj, path, value) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Safe property set by path",
+  fn: set,
+  tests: [
+    { call: (set) => set({}, 'a.b.c', 42), expected: { a: { b: { c: 42 } } } },
+    { call: (set) => set({ a: { x: 1 } }, 'a.y', 2), expected: { a: { x: 1, y: 2 } } },
+    { call: (set) => set({}, 'k', 'val'), expected: { k: 'val' } }
+  ],
+};
+
