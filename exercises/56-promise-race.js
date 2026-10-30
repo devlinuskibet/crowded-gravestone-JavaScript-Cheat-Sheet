@@ -7,3 +7,34 @@
 function promiseRace(promises) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Implement Promise.race",
+  fn: promiseRace,
+  tests: [
+    {
+      call: async (promiseRace) => {
+        const p1 = new Promise(r => setTimeout(() => r('slow'), 40));
+        const p2 = new Promise(r => setTimeout(() => r('fast'), 10));
+        return await promiseRace([p1, p2]);
+      },
+      expected: 'fast'
+    },
+    {
+      call: async (promiseRace) => {
+        const p1 = new Promise((_, reject) => setTimeout(() => reject(new Error('boom')), 10));
+        p1.catch(() => {});
+        const p2 = new Promise(r => setTimeout(() => r('ok'), 40));
+        try {
+          await promiseRace([p1, p2]);
+          return 'no';
+        } catch (e) {
+          return e.message;
+        }
+      },
+      expected: 'boom'
+    }
+  ],
+};
+
