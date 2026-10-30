@@ -10,3 +10,16 @@ function truncateWords(str, numWords) {
   if (words.length <= numWords) return str;
   return words.slice(0, numWords).join(' ') + '...';
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Truncate by word count",
+  fn: truncateWords,
+  tests: [
+    { args: ["The quick brown fox jumps", 3], expected: "The quick brown..." },
+    { args: ["Hello world", 5], expected: "Hello world" },
+    { args: ["One two three", 3], expected: "One two three" },
+    { args: ["", 3], expected: "" }
+  ],
+};
+
