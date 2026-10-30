@@ -7,3 +7,16 @@
 function range(start, end, step = 1) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Generate a range of numbers",
+  fn: range,
+  tests: [
+    { args: [0, 5], expected: [0, 1, 2, 3, 4] },
+    { args: [0, 10, 2], expected: [0, 2, 4, 6, 8] },
+    { args: [5, 2, -1], expected: [5, 4, 3] },
+    { args: [3, 3], expected: [] }
+  ],
+};
+
