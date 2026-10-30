@@ -13,3 +13,26 @@ function withTimeout(promise, ms, fallbackValue) {
     );
   });
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Promise with timeout",
+  fn: withTimeout,
+  tests: [
+    {
+      call: async (withTimeout) => {
+        const slow = new Promise(r => setTimeout(() => r('done'), 60));
+        return await withTimeout(slow, 20, 'fallback');
+      },
+      expected: 'fallback'
+    },
+    {
+      call: async (withTimeout) => {
+        const fast = new Promise(r => setTimeout(() => r('quick'), 10));
+        return await withTimeout(fast, 60, 'fallback');
+      },
+      expected: 'quick'
+    }
+  ],
+};
+
