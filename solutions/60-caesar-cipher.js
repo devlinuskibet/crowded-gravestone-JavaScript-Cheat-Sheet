@@ -12,3 +12,16 @@ function caesarCipher(str, shift) {
     return String.fromCharCode(((code - base + s) % 26) + base);
   });
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Caesar cipher",
+  fn: caesarCipher,
+  tests: [
+    { args: ["abc", 1], expected: "bcd" },
+    { args: ["Hello, World!", 3], expected: "Khoor, Zruog!" },
+    { args: ["xyz", 2], expected: "zab" },
+    { args: ["Zebra-123", -1], expected: "Ydaqz-123" }
+  ],
+};
+
