@@ -7,3 +7,15 @@
 function uniqueBy(arr, key) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Remove duplicates by key",
+  fn: uniqueBy,
+  tests: [
+    { args: [[{ id: 1, name: 'A' }, { id: 2, name: 'B' }, { id: 1, name: 'C' }], 'id'], expected: [{ id: 1, name: 'A' }, { id: 2, name: 'B' }] },
+    { args: [[{ k: 'x' }, { k: 'x' }], 'k'], expected: [{ k: 'x' }] },
+    { args: [[], 'id'], expected: [] }
+  ],
+};
+
