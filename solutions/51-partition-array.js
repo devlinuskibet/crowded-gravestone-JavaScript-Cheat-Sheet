@@ -16,3 +16,15 @@ function partition(arr, predicate) {
   }
   return [pass, fail];
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Partition an array",
+  fn: partition,
+  tests: [
+    { args: [[1, 2, 3, 4, 5], n => n % 2 === 0], expected: [[2, 4], [1, 3, 5]] },
+    { args: [['apple', 'banana', 'avocado'], w => w.startsWith('a')], expected: [['apple', 'avocado'], ['banana']] },
+    { args: [[], x => true], expected: [[], []] }
+  ],
+};
+
