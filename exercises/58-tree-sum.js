@@ -7,3 +7,16 @@
 function treeSum(node) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Tree sum traversal",
+  fn: treeSum,
+  tests: [
+    { args: [{ value: 1, children: [{ value: 2 }, { value: 3, children: [{ value: 4 }] }] }], expected: 10 },
+    { args: [{ value: 5 }], expected: 5 },
+    { args: [null], expected: 0 },
+    { args: [{ value: 10, children: [] }], expected: 10 }
+  ],
+};
+
