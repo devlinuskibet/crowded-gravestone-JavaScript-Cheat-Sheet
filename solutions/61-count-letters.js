@@ -16,3 +16,16 @@ function countLetters(str) {
   }
   return { vowels, consonants };
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Count vowels and consonants",
+  fn: countLetters,
+  tests: [
+    { args: ["Hello World"], expected: { vowels: 3, consonants: 7 } },
+    { args: ["12345!@#"], expected: { vowels: 0, consonants: 0 } },
+    { args: ["aeiou"], expected: { vowels: 5, consonants: 0 } },
+    { args: ["rhythm"], expected: { vowels: 0, consonants: 6 } }
+  ],
+};
+
