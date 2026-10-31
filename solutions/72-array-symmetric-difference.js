@@ -12,3 +12,16 @@ function symmetricDifference(arr1, arr2) {
   for (const x of s2) if (!s1.has(x)) result.push(x);
   return result;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Array symmetric difference",
+  fn: symmetricDifference,
+  tests: [
+    { args: [[1, 2, 3], [3, 4, 5]], expected: [1, 2, 4, 5] },
+    { args: [[1, 2], [1, 2]], expected: [] },
+    { args: [[1, 2, 2], [3]], expected: [1, 2, 3] },
+    { args: [[], [1, 2]], expected: [1, 2] }
+  ],
+};
+
