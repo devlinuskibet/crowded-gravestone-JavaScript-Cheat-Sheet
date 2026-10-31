@@ -7,3 +7,16 @@
 function majorityElement(nums) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Majority element",
+  fn: majorityElement,
+  tests: [
+    { args: [[3, 2, 3]], expected: 3 },
+    { args: [[2, 2, 1, 1, 1, 2, 2]], expected: 2 },
+    { args: [[1]], expected: 1 },
+    { args: [[5, 5, 5, 1, 2, 5]], expected: 5 }
+  ],
+};
+
