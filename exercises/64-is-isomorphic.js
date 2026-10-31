@@ -7,3 +7,16 @@
 function isIsomorphic(s, t) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Isomorphic strings",
+  fn: isIsomorphic,
+  tests: [
+    { args: ["egg", "add"], expected: true },
+    { args: ["foo", "bar"], expected: false },
+    { args: ["paper", "title"], expected: true },
+    { args: ["ab", "aa"], expected: false }
+  ],
+};
+
