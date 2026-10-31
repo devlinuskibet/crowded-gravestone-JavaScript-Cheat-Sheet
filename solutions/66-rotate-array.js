@@ -10,3 +10,16 @@ function rotateArray(arr, k) {
   if (shift === 0) return arr.slice();
   return arr.slice(-shift).concat(arr.slice(0, -shift));
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Rotate an array",
+  fn: rotateArray,
+  tests: [
+    { args: [[1, 2, 3, 4, 5], 2], expected: [4, 5, 1, 2, 3] },
+    { args: [[1, 2, 3], 4], expected: [3, 1, 2] },
+    { args: [[10, 20], 0], expected: [10, 20] },
+    { args: [[], 3], expected: [] }
+  ],
+};
+
