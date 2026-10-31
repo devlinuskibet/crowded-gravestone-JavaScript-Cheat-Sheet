@@ -7,3 +7,16 @@
 function stripHtml(html) {
   return html.replace(/<[^>]*>/g, '');
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Strip HTML tags",
+  fn: stripHtml,
+  tests: [
+    { args: ["<p>Hello <b>World</b>!</p>"], expected: "Hello World!" },
+    { args: ["No tags here"], expected: "No tags here" },
+    { args: ["<a href='https://example.com'>Click me</a>"], expected: "Click me" },
+    { args: ["<div><span></span></div>"], expected: "" }
+  ],
+};
+
