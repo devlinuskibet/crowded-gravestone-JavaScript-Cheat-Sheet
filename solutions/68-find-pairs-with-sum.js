@@ -18,3 +18,16 @@ function findPairs(nums, target) {
   }
   return Array.from(pairs.values()).sort((p1, p2) => p1[0] - p2[0]);
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Find pairs with sum",
+  fn: findPairs,
+  tests: [
+    { args: [[1, 2, 3, 4, 3, 5], 6], expected: [[1, 5], [2, 4], [3, 3]] },
+    { args: [[1, 2, 3], 10], expected: [] },
+    { args: [[0, -1, 2, -3, 1], -2], expected: [[-3, 1]] },
+    { args: [[], 5], expected: [] }
+  ],
+};
+
