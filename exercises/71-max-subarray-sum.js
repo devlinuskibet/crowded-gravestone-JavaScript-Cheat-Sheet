@@ -7,3 +7,16 @@
 function maxSubarraySum(nums) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Maximum subarray sum",
+  fn: maxSubarraySum,
+  tests: [
+    { args: [[-2, 1, -3, 4, -1, 2, 1, -5, 4]], expected: 6 },
+    { args: [[1]], expected: 1 },
+    { args: [[-1, -2, -3]], expected: -1 },
+    { args: [[5, 4, -1, 7, 8]], expected: 23 }
+  ],
+};
+
