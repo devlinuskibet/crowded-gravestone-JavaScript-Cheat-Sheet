@@ -7,3 +7,16 @@
 function titleCase(str) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Title case with exceptions",
+  fn: titleCase,
+  tests: [
+    { args: ["the lord of the rings"], expected: "The Lord of the Rings" },
+    { args: ["a tale of two cities"], expected: "A Tale of Two Cities" },
+    { args: ["war and peace"], expected: "War and Peace" },
+    { args: ["hello"], expected: "Hello" }
+  ],
+};
+
