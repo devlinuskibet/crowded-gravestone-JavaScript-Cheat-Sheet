@@ -7,3 +7,16 @@
 function rotateArray(arr, k) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Rotate an array",
+  fn: rotateArray,
+  tests: [
+    { args: [[1, 2, 3, 4, 5], 2], expected: [4, 5, 1, 2, 3] },
+    { args: [[1, 2, 3], 4], expected: [3, 1, 2] },
+    { args: [[10, 20], 0], expected: [10, 20] },
+    { args: [[], 3], expected: [] }
+  ],
+};
+
