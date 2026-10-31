@@ -13,3 +13,16 @@ function longestWord(sentence) {
   }
   return longest;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Find longest word",
+  fn: longestWord,
+  tests: [
+    { args: ["The quick, brown fox jumps over the lazy dog."], expected: "quick" },
+    { args: ["A journey of a thousand miles begins with a single step."], expected: "thousand" },
+    { args: ["One two three"], expected: "three" },
+    { args: [""], expected: "" }
+  ],
+};
+
