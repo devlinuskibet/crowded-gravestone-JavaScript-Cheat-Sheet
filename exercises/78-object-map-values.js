@@ -7,3 +7,15 @@
 function mapValues(obj, fn) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Map object values",
+  fn: mapValues,
+  tests: [
+    { args: [{ a: 1, b: 2 }, x => x * 10], expected: { a: 10, b: 20 } },
+    { args: [{ name: "ada" }, s => s.toUpperCase()], expected: { name: "ADA" } },
+    { args: [{}, x => x], expected: {} }
+  ],
+};
+
