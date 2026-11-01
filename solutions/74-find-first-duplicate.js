@@ -12,3 +12,16 @@ function firstDuplicate(arr) {
   }
   return null;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Find first duplicate",
+  fn: firstDuplicate,
+  tests: [
+    { args: [[2, 1, 3, 5, 3, 2]], expected: 3 },
+    { args: [[1, 2, 3, 4]], expected: null },
+    { args: [[1, 1]], expected: 1 },
+    { args: [[]], expected: null }
+  ],
+};
+
