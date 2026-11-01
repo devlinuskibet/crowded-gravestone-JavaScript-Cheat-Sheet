@@ -9,3 +9,15 @@ function negate(predicate) {
     return !predicate.apply(this, args);
   };
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Negate predicate",
+  fn: negate,
+  tests: [
+    { call: (negate) => negate(x => x % 2 === 0)(3), expected: true },
+    { call: (negate) => negate(x => x > 10)(20), expected: false },
+    { call: (negate) => [1, 2, 3, 4].filter(negate(x => x % 2 === 0)), expected: [1, 3] }
+  ],
+};
+
