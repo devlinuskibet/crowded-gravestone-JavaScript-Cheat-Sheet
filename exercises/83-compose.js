@@ -7,3 +7,15 @@
 function compose(...fns) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Compose functions right-to-left",
+  fn: compose,
+  tests: [
+    { call: (compose) => compose(x => x + 1, x => x * 2)(3), expected: 7 },
+    { call: (compose) => compose(s => s + '!', s => s.toUpperCase())('hello'), expected: 'HELLO!' },
+    { call: (compose) => compose()(100), expected: 100 }
+  ],
+};
+
