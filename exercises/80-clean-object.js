@@ -7,3 +7,15 @@
 function cleanObject(obj) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Clean object nulls and undefined",
+  fn: cleanObject,
+  tests: [
+    { args: [{ a: 1, b: null, c: undefined, d: 0, e: "" }], expected: { a: 1, d: 0, e: "" } },
+    { args: [{ x: null, y: undefined }], expected: {} },
+    { args: [{ valid: true }], expected: { valid: true } }
+  ],
+};
+
