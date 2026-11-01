@@ -13,3 +13,15 @@ function keyBy(arr, key) {
   }
   return result;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Key array by property",
+  fn: keyBy,
+  tests: [
+    { args: [[{ id: "a", val: 1 }, { id: "b", val: 2 }], "id"], expected: { a: { id: "a", val: 1 }, b: { id: "b", val: 2 } } },
+    { args: [[{ code: 101, text: "ok" }], "code"], expected: { 101: { code: 101, text: "ok" } } },
+    { args: [[], "id"], expected: {} }
+  ],
+};
+
