@@ -18,3 +18,15 @@ function unflattenObject(obj) {
   }
   return result;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Unflatten dotted keys object",
+  fn: unflattenObject,
+  tests: [
+    { args: [{ "a.b": 1, "a.c": 2, d: 3 }], expected: { a: { b: 1, c: 2 }, d: 3 } },
+    { args: [{ "user.profile.name": "Alice" }], expected: { user: { profile: { name: "Alice" } } } },
+    { args: [{}], expected: {} }
+  ],
+};
+
