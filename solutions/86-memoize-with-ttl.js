@@ -18,3 +18,24 @@ function memoizeWithTTL(fn, ttlMs) {
     return val;
   };
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Memoize with TTL",
+  fn: memoizeWithTTL,
+  tests: [
+    {
+      call: async (memoizeWithTTL) => {
+        let calls = 0;
+        const fn = memoizeWithTTL(x => { calls++; return x * 2; }, 30);
+        fn(5);
+        fn(5);
+        await new Promise(r => setTimeout(r, 45));
+        fn(5);
+        return calls;
+      },
+      expected: 2
+    }
+  ],
+};
+
