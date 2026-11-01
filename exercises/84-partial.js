@@ -7,3 +7,14 @@
 function partial(fn, ...presetArgs) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Partial function application",
+  fn: partial,
+  tests: [
+    { call: (partial) => partial((a, b, c) => a + b + c, 2, 3)(4), expected: 9 },
+    { call: (partial) => partial((greeting, name) => greeting + ', ' + name, 'Hello')('World'), expected: 'Hello, World' },
+    { call: (partial) => partial((x) => x * 2)(10), expected: 20 }  ],
+};
+
