@@ -7,3 +7,16 @@
 function flattenObject(obj) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Flatten nested object",
+  fn: flattenObject,
+  tests: [
+    { args: [{ a: { b: 1, c: 2 }, d: 3 }], expected: { "a.b": 1, "a.c": 2, "d": 3 } },
+    { args: [{ x: 10 }], expected: { x: 10 } },
+    { args: [{ user: { profile: { name: "Alice" } } }], expected: { "user.profile.name": "Alice" } },
+    { args: [{}], expected: {} }
+  ],
+};
+
