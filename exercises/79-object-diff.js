@@ -7,3 +7,15 @@
 function objectDiff(obj1, obj2) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Object difference comparison",
+  fn: objectDiff,
+  tests: [
+    { args: [{ a: 1, b: 2 }, { b: 3, c: 4 }], expected: { added: ["c"], removed: ["a"], updated: ["b"] } },
+    { args: [{ x: 10 }, { x: 10 }], expected: { added: [], removed: [], updated: [] } },
+    { args: [{}, { a: 1 }], expected: { added: ["a"], removed: [], updated: [] } }
+  ],
+};
+
