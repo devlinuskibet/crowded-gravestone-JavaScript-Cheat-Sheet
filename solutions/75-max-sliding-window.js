@@ -16,3 +16,16 @@ function maxSlidingWindow(nums, k) {
   }
   return result;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Sliding window maximum",
+  fn: maxSlidingWindow,
+  tests: [
+    { args: [[1, 3, -1, -3, 5, 3, 6, 7], 3], expected: [3, 3, 5, 5, 6, 7] },
+    { args: [[1], 1], expected: [1] },
+    { args: [[9, 11], 2], expected: [11] },
+    { args: [[4, -2], 1], expected: [4, -2] }
+  ],
+};
+
