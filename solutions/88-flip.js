@@ -9,3 +9,14 @@ function flip(fn) {
     return fn.call(this, b, a, ...rest);
   };
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Flip function arguments",
+  fn: flip,
+  tests: [
+    { call: (flip) => flip((a, b) => a / b)(2, 10), expected: 5 },
+    { call: (flip) => flip((a, b, c) => a + b + c)('A', 'B', 'C'), expected: 'BAC' }
+  ],
+};
+
