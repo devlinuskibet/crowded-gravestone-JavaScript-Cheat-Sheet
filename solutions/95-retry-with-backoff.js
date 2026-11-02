@@ -18,3 +18,24 @@ async function retryWithBackoff(fn, retries, baseDelay = 10) {
   }
   throw lastErr;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Retry with exponential backoff",
+  fn: retryWithBackoff,
+  tests: [
+    {
+      call: async (retryWithBackoff) => {
+        let attempts = 0;
+        const task = async () => {
+          attempts++;
+          if (attempts < 3) throw new Error('fail');
+          return 'success';
+        };
+        return await retryWithBackoff(task, 3, 5);
+      },
+      expected: 'success'
+    }
+  ],
+};
+
