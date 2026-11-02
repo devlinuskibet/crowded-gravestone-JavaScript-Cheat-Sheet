@@ -11,3 +11,23 @@ async function asyncSeries(tasks) {
   }
   return results;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Execute async tasks in series",
+  fn: asyncSeries,
+  tests: [
+    {
+      call: async (asyncSeries) => {
+        const order = [];
+        const t1 = async () => { order.push(1); return 'A'; };
+        const t2 = async () => { order.push(2); return 'B'; };
+        const res = await asyncSeries([t1, t2]);
+        return { res, order };
+      },
+      expected: { res: ['A', 'B'], order: [1, 2] }
+    },
+    { call: async (asyncSeries) => await asyncSeries([]), expected: [] }
+  ],
+};
+
