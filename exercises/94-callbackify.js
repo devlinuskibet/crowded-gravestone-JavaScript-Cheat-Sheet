@@ -7,3 +7,30 @@
 function callbackify(asyncFn) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Callbackify async function",
+  fn: callbackify,
+  tests: [
+    {
+      call: (callbackify) => {
+        return new Promise(resolve => {
+          const fn = callbackify(async (a, b) => a + b);
+          fn(5, 7, (err, res) => resolve(res));
+        });
+      },
+      expected: 12
+    },
+    {
+      call: (callbackify) => {
+        return new Promise(resolve => {
+          const fn = callbackify(async () => { throw new Error('err'); });
+          fn((err) => resolve(err ? err.message : null));
+        });
+      },
+      expected: 'err'
+    }
+  ],
+};
+
