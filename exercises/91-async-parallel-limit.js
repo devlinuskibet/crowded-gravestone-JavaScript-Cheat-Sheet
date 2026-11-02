@@ -7,3 +7,29 @@
 function parallelLimit(tasks, limit) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Parallel execution with concurrency limit",
+  fn: parallelLimit,
+  tests: [
+    {
+      call: async (parallelLimit) => {
+        let maxActive = 0;
+        let currentActive = 0;
+        const makeTask = (id, ms) => async () => {
+          currentActive++;
+          if (currentActive > maxActive) maxActive = currentActive;
+          await new Promise(r => setTimeout(r, ms));
+          currentActive--;
+          return id;
+        };
+        const tasks = [makeTask(1, 20), makeTask(2, 20), makeTask(3, 20)];
+        const res = await parallelLimit(tasks, 2);
+        return { res, maxActive };
+      },
+      expected: { res: [1, 2, 3], maxActive: 2 }
+    }
+  ],
+};
+
