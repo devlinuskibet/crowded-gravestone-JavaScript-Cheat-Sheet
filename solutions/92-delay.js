@@ -7,3 +7,20 @@
 function delay(ms, value) {
   return new Promise(resolve => setTimeout(() => resolve(value), ms));
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Async sleep / delay",
+  fn: delay,
+  tests: [
+    {
+      call: async (delay) => {
+        const start = Date.now();
+        const val = await delay(25, 'hello');
+        return { val, passed: Date.now() - start >= 20 };
+      },
+      expected: { val: 'hello', passed: true }
+    }
+  ],
+};
+
