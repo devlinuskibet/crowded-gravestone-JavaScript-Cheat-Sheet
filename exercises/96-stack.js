@@ -7,3 +7,31 @@
 class Stack {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Stack data structure",
+  fn: Stack,
+  tests: [
+    {
+      call: (Stack) => {
+        const s = new Stack();
+        s.push(10);
+        s.push(20);
+        const p1 = s.peek();
+        const pop1 = s.pop();
+        const sz = s.size();
+        return [p1, pop1, sz, s.isEmpty()];
+      },
+      expected: [20, 20, 1, false]
+    },
+    {
+      call: (Stack) => {
+        const s = new Stack();
+        return [s.pop(), s.peek(), s.isEmpty()];
+      },
+      expected: [null, null, true]
+    }
+  ],
+};
+
