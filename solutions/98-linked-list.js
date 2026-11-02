@@ -40,3 +40,29 @@ class LinkedList {
     return this._size;
   }
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Singly linked list",
+  fn: LinkedList,
+  tests: [
+    {
+      call: (LinkedList) => {
+        const l = new LinkedList();
+        l.insertAtHead(2);
+        l.insertAtHead(1);
+        l.insertAtTail(3);
+        return [l.toArray(), l.size()];
+      },
+      expected: [[1, 2, 3], 3]
+    },
+    {
+      call: (LinkedList) => {
+        const l = new LinkedList();
+        return [l.toArray(), l.size()];
+      },
+      expected: [[], 0]
+    }
+  ],
+};
+
