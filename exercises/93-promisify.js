@@ -7,3 +7,33 @@
 function promisify(fn) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Promisify callback function",
+  fn: promisify,
+  tests: [
+    {
+      call: async (promisify) => {
+        const mockFn = (val, cb) => cb(null, val * 2);
+        const promisified = promisify(mockFn);
+        return await promisified(21);
+      },
+      expected: 42
+    },
+    {
+      call: async (promisify) => {
+        const mockError = (cb) => cb(new Error('fail'));
+        const promisified = promisify(mockError);
+        try {
+          await promisified();
+          return 'ok';
+        } catch (e) {
+          return e.message;
+        }
+      },
+      expected: 'fail'
+    }
+  ],
+};
+
