@@ -13,3 +13,24 @@ function createAccumulator(initial = 0) {
     reset() { current = initial; return current; }
   };
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Stateful accumulator",
+  fn: createAccumulator,
+  tests: [
+    {
+      call: (createAccumulator) => {
+        const acc = createAccumulator(10);
+        acc.add(5);
+        acc.subtract(3);
+        const res1 = acc.get();
+        acc.reset();
+        const res2 = acc.get();
+        return [res1, res2];
+      },
+      expected: [12, 10]
+    }
+  ],
+};
+
