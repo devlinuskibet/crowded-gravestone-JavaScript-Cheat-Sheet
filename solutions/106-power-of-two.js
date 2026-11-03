@@ -7,3 +7,17 @@
 function isPowerOfTwo(n) {
   return n > 0 && (n & (n - 1)) === 0;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Check power of two",
+  fn: isPowerOfTwo,
+  tests: [
+    { args: [1], expected: true },
+    { args: [16], expected: true },
+    { args: [18], expected: false },
+    { args: [0], expected: false },
+    { args: [-16], expected: false }
+  ],
+};
+
