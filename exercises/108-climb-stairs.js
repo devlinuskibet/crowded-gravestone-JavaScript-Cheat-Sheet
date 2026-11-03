@@ -7,3 +7,16 @@
 function climbStairs(n) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Climbing stairs combinations",
+  fn: climbStairs,
+  tests: [
+    { args: [2], expected: 2 },
+    { args: [3], expected: 3 },
+    { args: [4], expected: 5 },
+    { args: [5], expected: 8 }
+  ],
+};
+
