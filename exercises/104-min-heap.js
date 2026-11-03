@@ -7,3 +7,27 @@
 class MinHeap {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Min heap / priority queue",
+  fn: MinHeap,
+  tests: [
+    {
+      call: (MinHeap) => {
+        const h = new MinHeap();
+        h.insert(5); h.insert(3); h.insert(8); h.insert(1);
+        return [h.peek(), h.extractMin(), h.extractMin(), h.size()];
+      },
+      expected: [1, 1, 3, 2]
+    },
+    {
+      call: (MinHeap) => {
+        const h = new MinHeap();
+        return [h.peek(), h.extractMin(), h.size()];
+      },
+      expected: [null, null, 0]
+    }
+  ],
+};
+
