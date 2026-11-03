@@ -13,3 +13,17 @@ function isPrime(n) {
   }
   return true;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Check prime number",
+  fn: isPrime,
+  tests: [
+    { args: [2], expected: true },
+    { args: [7], expected: true },
+    { args: [12], expected: false },
+    { args: [1], expected: false },
+    { args: [29], expected: true }
+  ],
+};
+
