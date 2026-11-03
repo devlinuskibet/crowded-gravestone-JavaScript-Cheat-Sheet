@@ -7,3 +7,22 @@
 function inorderTraversal(root) {
   // YOUR CODE HERE
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Binary tree inorder traversal",
+  fn: inorderTraversal,
+  tests: [
+    {
+      args: [{
+        val: 2,
+        left: { val: 1, left: null, right: null },
+        right: { val: 3, left: null, right: null }
+      }],
+      expected: [1, 2, 3]
+    },
+    { args: [null], expected: [] },
+    { args: [{ val: 10, left: null, right: null }], expected: [10] }
+  ],
+};
+
