@@ -15,3 +15,28 @@ function reverseLinkedList(head) {
   }
   return prev;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "Reverse a linked list",
+  fn: reverseLinkedList,
+  tests: [
+    {
+      call: (reverseLinkedList) => {
+        const node3 = { val: 3, next: null };
+        const node2 = { val: 2, next: node3 };
+        const node1 = { val: 1, next: node2 };
+        let curr = reverseLinkedList(node1);
+        const res = [];
+        while (curr) { res.push(curr.val); curr = curr.next; }
+        return res;
+      },
+      expected: [3, 2, 1]
+    },
+    {
+      call: (reverseLinkedList) => reverseLinkedList(null),
+      expected: null
+    }
+  ],
+};
+
