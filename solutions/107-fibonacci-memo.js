@@ -16,3 +16,16 @@ function fib(n) {
   }
   return b;
 }
+
+// ---- Tests (please do not edit below this line) ----
+module.exports = {
+  title: "N-th Fibonacci number",
+  fn: fib,
+  tests: [
+    { args: [0], expected: 0 },
+    { args: [1], expected: 1 },
+    { args: [6], expected: 8 },
+    { args: [10], expected: 55 }
+  ],
+};
+
